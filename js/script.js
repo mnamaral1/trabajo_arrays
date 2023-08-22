@@ -36,9 +36,10 @@ function showList(array) {
   });
 }
 
+
 document.addEventListener("DOMContentLoaded", (e) => {
   let strangeArrayFiltered = strangeArray.filter(item => typeof item === 'string');
-  let strangeArrayFilteredandSorted = strangeArrayFiltered.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  let strangeArrayFilteredandSorted = strangeArrayFiltered.sort((a,b) => a.localeCompare(b));
   showList(strangeArrayFilteredandSorted);
 
 });
